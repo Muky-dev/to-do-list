@@ -16,6 +16,10 @@ app.engine('handlebars', handlebars({
 }));
 app.set('view engine', 'handlebars');
 
+// ROUTES
+import rootRouter from "./routes/root.js";
+app.use("/", rootRouter);
+
 // MONGOOSE
 mongoose.connect(MONGOURI, {
 	useNewUrlParser: true,
