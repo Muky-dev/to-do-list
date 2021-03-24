@@ -1,10 +1,20 @@
 // MODULES
 import express from "express";
-
+import mongoose from "mongoose";
+import handlebars from "express-handlebars";
+import dotenv from "dotenv";
+dotenv.config()
 
 // APP
 const app = express();
 const PORT = process.env.PORT || 3000;
+const MONGOURI = process.env.MONGOURI;
+
+// HANDLEBARS
+app.engine('handlebars', handlebars({
+	defaultLayout: 'main',
+}));
+app.set('view engine', 'handlebars');
 
 // MONGOOSE
 mongoose.connect(MONGOURI, {
