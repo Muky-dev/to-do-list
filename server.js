@@ -12,7 +12,7 @@ const MONGOURI = process.env.MONGOURI;
 
 app.use(express.urlencoded({ limit: "10mb", extended: false}))
 
-// HANDLEBARS
+// HANDLEBARS aaa
 app.engine('handlebars', handlebars({
 	defaultLayout: 'main',
 }));
