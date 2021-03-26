@@ -10,6 +10,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const MONGOURI = process.env.MONGOURI;
 
+app.use(express.urlencoded({ limit: "10mb", extended: false}))
+
 // HANDLEBARS
 app.engine('handlebars', handlebars({
 	defaultLayout: 'main',
