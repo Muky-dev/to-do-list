@@ -1,0 +1,18 @@
+<h2>To-do list</h2>
+
+<div class="card mt-4">
+	<div class="card-body">
+
+		{{#each lists}}
+		<div>
+			<ul>
+				<a href="/{{author}}/{{_id}}"><li>{{title}}</li></a>
+			</ul>
+		</div>
+		{{/each}}
+
+		<a href="/new">
+			<button class="btn btn-primary">New To-do</button>
+		</a>
+	</div>
+</div>
