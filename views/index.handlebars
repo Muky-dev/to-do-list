@@ -5,14 +5,19 @@
 
 		{{#each lists}}
 		<div>
+
 			<ul>
 				<a href="/{{author}}/{{_id}}"><li>{{title}}</li></a>
+				<a href="/delete/{{_id}}">delete</a>
 			</ul>
+
 		</div>
+
 		{{/each}}
 
 		<a href="/new">
 			<button class="btn btn-primary">New To-do</button>
 		</a>
+
 	</div>
 </div>
